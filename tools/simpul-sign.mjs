@@ -13,7 +13,6 @@ import { createHash, createPrivateKey, createPublicKey, generateKeyPairSync, sig
 import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { dirname, isAbsolute, join, relative, resolve } from 'node:path';
-import { createInterface } from 'node:readline';
 import { fileURLToPath } from 'node:url';
 
 const REPO = resolve(dirname(fileURLToPath(import.meta.url)), '..');
@@ -41,10 +40,31 @@ function publicKeyFromRaw(raw32) {
 
 function askHidden(question) {
   if (process.env.SIMPUL_KEY_PASSPHRASE) return Promise.resolve(process.env.SIMPUL_KEY_PASSPHRASE);
+  const stdin = process.stdin;
+  if (!stdin.isTTY) die('Passphrase harus diketik langsung di terminal (bukan lewat pipe).');
+  // Baca per tombol dalam raw mode: tidak ada satu karakter pun yang ditampilkan di layar.
   return new Promise((res) => {
-    const rl = createInterface({ input: process.stdin, output: process.stdout, terminal: true });
-    rl._writeToOutput = (s) => { if (s.includes(question)) rl.output.write(s); };
-    rl.question(question, (answer) => { rl.close(); process.stdout.write('\n'); res(answer); });
+    process.stdout.write(question);
+    let value = '';
+    stdin.setRawMode(true);
+    stdin.resume();
+    stdin.setEncoding('utf8');
+    const onData = (chunk) => {
+      for (const ch of chunk) {
+        if (ch === '\r' || ch === '\n') {
+          stdin.setRawMode(false);
+          stdin.pause();
+          stdin.off('data', onData);
+          process.stdout.write('\n');
+          res(value);
+          return;
+        }
+        if (ch === '\u0003') { stdin.setRawMode(false); process.stdout.write('\n'); process.exit(130); }
+        if (ch === '\u0008' || ch === '\u007f') { value = value.slice(0, -1); continue; }
+        if (ch >= ' ') value += ch;
+      }
+    };
+    stdin.on('data', onData);
   });
 }
 
