@@ -104,6 +104,18 @@ function validateManifest(m) {
       }
     }
 
+    if (a.min_launcher != null && !isVer(a.min_launcher)) errs.push(`${p}.min_launcher harus format x.y.z.`);
+    if (a.min_version != null) {
+      if (!isVer(a.min_version)) errs.push(`${p}.min_version harus format x.y.z.`);
+      else if (!isObj(a.release) || !isVer(a.release.version)) errs.push(`${p}.min_version butuh release.`);
+      else {
+        const num = (v) => v.split(/[-+]/)[0].split('.').map(Number);
+        const [x, y] = [num(a.min_version), num(a.release.version)];
+        const above = x[0] !== y[0] ? x[0] > y[0] : x[1] !== y[1] ? x[1] > y[1] : x[2] > y[2];
+        if (above) errs.push(`${p}.min_version melebihi versi rilis.`);
+      }
+    }
+
     if (a.release != null) {
       const r = a.release;
       if (!isObj(r)) { errs.push(`${p}.release harus objek atau null.`); continue; }
