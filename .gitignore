@@ -1,0 +1,9 @@
+# Kunci privat tidak boleh pernah masuk repo
+*.key
+*.pem
+*.p12
+*.pfx
+.simpul-keys/
+.env
+.env.*
+node_modules/

@@ -1,0 +1,42 @@
+{
+  "schema": 1,
+  "issued_at": "2026-11-23T00:00:00Z",
+  "apps": {
+    "launcher": {
+      "name": "Simpul Launcher",
+      "status": "green",
+      "notice": null,
+      "release": null
+    },
+    "video": {
+      "name": "Simpul Video",
+      "status": "green",
+      "notice": null,
+      "release": null
+    },
+    "design": {
+      "name": "Simpul Design",
+      "status": "green",
+      "notice": null,
+      "release": null
+    },
+    "3d": {
+      "name": "Simpul 3D",
+      "status": "green",
+      "notice": null,
+      "release": null
+    },
+    "audio": {
+      "name": "Simpul Audio",
+      "status": "green",
+      "notice": null,
+      "release": null
+    },
+    "sync": {
+      "name": "Simpul Sync",
+      "status": "green",
+      "notice": null,
+      "release": null
+    }
+  }
+}

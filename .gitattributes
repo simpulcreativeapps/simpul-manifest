@@ -1,0 +1,4 @@
+# Tanda tangan dihitung dari byte persis file. Jangan biarkan Git mengubah akhir baris.
+* text=auto eol=lf
+*.json -text
+*.sig -text
