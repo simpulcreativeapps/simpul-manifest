@@ -1,16 +1,16 @@
 {
   "schema": 1,
-  "issued_at": "2026-11-24T09:11:27Z",
+  "issued_at": "2026-11-24T09:55:10Z",
   "apps": {
     "launcher": {
       "name": "Simpul Launcher",
       "status": "green",
       "notice": null,
       "release": {
-        "version": "1.6.2",
-        "url": "https://github.com/simpulcreativeapps/simpul-launcher/releases/download/v1.6.2/Simpul-Creative-Launcher-Setup-1.6.2.exe",
-        "sha256": "e2d60cda924a5439752bca0387c94c571df6a31a7e5aebd8c635ffaa1325ce84",
-        "notes_url": "https://github.com/simpulcreativeapps/simpul-launcher/releases/tag/v1.6.2"
+        "version": "1.6.3",
+        "url": "https://github.com/simpulcreativeapps/simpul-launcher/releases/download/v1.6.3/Simpul-Creative-Launcher-Setup-1.6.3.exe",
+        "sha256": "178582533ce2116440fa90af5ce5ed6d7a42f68c06851041677520da20031bf7",
+        "notes_url": "https://github.com/simpulcreativeapps/simpul-launcher/releases/tag/v1.6.3"
       },
       "min_version": "1.6.0"
     },
