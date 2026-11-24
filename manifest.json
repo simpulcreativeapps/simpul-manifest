@@ -1,17 +1,18 @@
 {
   "schema": 1,
-  "issued_at": "2026-11-23T14:47:36Z",
+  "issued_at": "2026-11-24T06:52:28Z",
   "apps": {
     "launcher": {
       "name": "Simpul Launcher",
       "status": "green",
       "notice": null,
       "release": {
-        "version": "1.5.1",
-        "url": "https://github.com/simpulcreativeapps/simpul-launcher/releases/download/v1.5.1/Simpul-Creative-Launcher-Setup-1.5.1.exe",
-        "sha256": "1481d55b695976839d2ffae8b15ad8676299c6bc5f2b087cf71a66db5aec0bd8",
-        "notes_url": "https://github.com/simpulcreativeapps/simpul-launcher/releases/tag/v1.5.1"
-      }
+        "version": "1.6.0",
+        "url": "https://github.com/simpulcreativeapps/simpul-launcher/releases/download/v1.6.0/Simpul-Creative-Launcher-Setup-1.6.0.exe",
+        "sha256": "9438f97382fa1faa7c225293aee96635086888be26a2999cd08b7fa8257d7c18",
+        "notes_url": "https://github.com/simpulcreativeapps/simpul-launcher/releases/tag/v1.6.0"
+      },
+      "min_version": "1.6.0"
     },
     "video": {
       "name": "Simpul Video",
@@ -41,7 +42,12 @@
       "name": "Simpul Sync",
       "status": "green",
       "notice": null,
-      "release": null
+      "release": {
+        "version": "4.2.0",
+        "url": "https://github.com/simpulcreativeapps/simpulsync/releases/download/v4.2.0/SimpulSync-4.2.0-setup.exe",
+        "sha256": "1718ca285320642a2018db1338a8a8e5e7fe2fa577d695ea1a3378c91396dbef",
+        "notes_url": "https://github.com/simpulcreativeapps/simpulsync/releases/tag/v4.2.0"
+      }
     }
   }
 }
