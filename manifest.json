@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "issued_at": "2026-11-27T18:23:10Z",
+  "issued_at": "2026-11-27T21:43:37Z",
   "apps": {
     "launcher": {
       "name": "Simpul Launcher",
@@ -55,12 +55,12 @@
       "notice": null,
       "release": null,
       "beta_release": {
-        "version": "0.2.0-beta",
-        "version_code": 20000,
-        "url": "https://github.com/simpulcreativeapps/simpulcut-pro/releases/download/v0.2.0-beta/SimpulCut-Pro-0.2.0-beta-arm64-release.apk",
-        "sha256": "c30800bd691392fa50292c997b15733f12e92b390782d9e882f4fd2781611f08",
-        "size": 136306822,
-        "notes_url": "https://github.com/simpulcreativeapps/simpulcut-pro/releases/tag/v0.2.0-beta"
+        "version": "0.2.1-beta",
+        "version_code": 21000,
+        "url": "https://github.com/simpulcreativeapps/simpulcut-pro/releases/download/v0.2.1-beta/SimpulCut-Pro-0.2.1-beta-arm64-release.apk",
+        "sha256": "fbb713661ab64e97c8d50463b633d5248f6f1c046f0a5d718d4ae681cb5777c8",
+        "size": 136323206,
+        "notes_url": "https://github.com/simpulcreativeapps/simpulcut-pro/releases/tag/v0.2.1-beta"
       }
     }
   }
