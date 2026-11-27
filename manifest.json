@@ -1,6 +1,6 @@
 {
   "schema": 1,
-  "issued_at": "2026-11-24T09:55:10Z",
+  "issued_at": "2026-11-27T18:23:10Z",
   "apps": {
     "launcher": {
       "name": "Simpul Launcher",
@@ -47,6 +47,20 @@
         "url": "https://github.com/simpulcreativeapps/simpulsync/releases/download/v4.2.2/SimpulSync-4.2.2-setup.exe",
         "sha256": "325d68d2d985160c0ea3ef0082fe1577dbec2d8146a945b0a2b4cd079141afc0",
         "notes_url": "https://github.com/simpulcreativeapps/simpulsync/releases/tag/v4.2.2"
+      }
+    },
+    "cut": {
+      "name": "SimpulCut Pro",
+      "status": "green",
+      "notice": null,
+      "release": null,
+      "beta_release": {
+        "version": "0.2.0-beta",
+        "version_code": 20000,
+        "url": "https://github.com/simpulcreativeapps/simpulcut-pro/releases/download/v0.2.0-beta/SimpulCut-Pro-0.2.0-beta-arm64-release.apk",
+        "sha256": "c30800bd691392fa50292c997b15733f12e92b390782d9e882f4fd2781611f08",
+        "size": 136306822,
+        "notes_url": "https://github.com/simpulcreativeapps/simpulcut-pro/releases/tag/v0.2.0-beta"
       }
     }
   }
